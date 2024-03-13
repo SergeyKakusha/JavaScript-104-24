@@ -1,10 +1,9 @@
 
 
+const sem=5 
 
 
-
-
-
+console.log(sem)
 
 
 
