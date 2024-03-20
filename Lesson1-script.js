@@ -304,21 +304,105 @@
 //                           відповідь 53
 // console.log(5+"3");
                             //  відповідь 5true 
-console.log("5"+true); 
+// console.log("5"+true); 
 
-                            //   відповідь 5null
-console.log("5"+null); 
-                            //  відповідь 5undefined
-console.log("5"+undefined); 
-                            //   відповідь 523
-console.log("5"+2+3); 
-
-
+//                             //   відповідь 5null
+// console.log("5"+null); 
+//                             //  відповідь 5undefined
+// console.log("5"+undefined); 
+//                             //   відповідь 523
+// console.log("5"+2+3); 
 
 
-//  відповідь 6 
-console.log(5+true); 
+// ============================================== Перетворення типів: числа
 
+// Явне перетворення типів
+// Неявне перетворення типів
+
+
+// console.log("5");
+// console.log(Number("5"));
+// console.log(typeof Number("5"));
+// console.log(Number(true));
+// console.log(Number(false));
+// console.log(Number(null));
+// console.log(Number(undefined));
+// console.log(Number("25px"));
+// console.log(Number("Kate"));
+// console.log(typeof Number("Kate"));
+
+// Lesson1-script.js:323 55
+// Lesson1-script.js:324 5
+// Lesson1-script.js:325 number
+// Lesson1-script.js:326 1
+// Lesson1-script.js:327 0
+// Lesson1-script.js:328 0
+// Lesson1-script.js:329 NaN
+// Lesson1-script.js:330 NaN
+// Lesson1-script.js:331 NaN
+// Lesson1-script.js:332 number
+
+
+// console.log("5"+2);
+// console.log("5"*2);
+// console.log("10"-3);
+// console.log(5+true);
+// console.log(5-true);
+
+// Lesson1-script.js:346 52
+// Lesson1-script.js:347 10
+// Lesson1-script.js:348 7
+// Lesson1-script.js:349 6
+// Lesson1-script.js:350 4
+
+
+// ===============================================   Оператори 
+
+// ----------  Оператори порівняння
+
+
+
+// console.log(5>4);
+// console.log(5 >= "4");
+// //   Unicode    2  < 1 по першому чилу
+// console.log("2" <"12");
+
+
+// Lesson1-script.js:365 true
+// Lesson1-script.js:366 true
+// Lesson1-script.js:368 false
+
+
+
+// ---------  Оператори рівності
+            //4==4 несуворе порівняння
+console.log("4"==4);
+            // ! оператор не дорівнює
+console.log("4"!=4);
+
+           // оператор суворого порівняння
+         // 1==="1" false
+console.log(1==="1");
+            //  рядок===boolean false
+console.log("false" === false);
+
+
+console.log(1 ==true);
+
+// Lesson1-script.js:379 true
+// Lesson1-script.js:381 false
+// Lesson1-script.js:385 false
+// Lesson1-script.js:387 false
+// Lesson1-script.js:390 true
+
+
+// 43:55
+
+
+
+
+ 
+// ---------- Приведення типов операндов
 
 
 
