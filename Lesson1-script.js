@@ -357,6 +357,7 @@
 
 
 // ===============================================   Оператори 
+// ---------- Приведення типов операндов
 
 // ----------  Оператори порівняння
 
@@ -364,7 +365,7 @@
 
 // console.log(5>4);
 // console.log(5 >= "4");
-// //   Unicode    2  < 1 по першому чилу
+// //   Unicode    2  < 1 по першому чиcлу
 // console.log("2" <"12");
 
 
@@ -376,18 +377,18 @@
 
 // ---------  Оператори рівності
             //4==4 несуворе порівняння
-console.log("4"==4);
-            // ! оператор не дорівнює
-console.log("4"!=4);
+// console.log("4"==4);
+//             // ! оператор не дорівнює
+// console.log("4"!=4);
 
-           // оператор суворого порівняння
-         // 1==="1" false
-console.log(1==="1");
-            //  рядок===boolean false
-console.log("false" === false);
+//            // оператор суворого порівняння
+//          // 1==="1" false строге порівняння ми порівнюємо чило та рядок вони не рівні
+// console.log(1==="1");
+//             //  рядок===boolean false
+// console.log("false" === false);
 
 
-console.log(1 ==true);
+// console.log(1 ==true);
 
 // Lesson1-script.js:379 true
 // Lesson1-script.js:381 false
@@ -397,52 +398,154 @@ console.log(1 ==true);
 
 
 // 43:55
+            // 1==1 true значення переиворюється в число (true=1)
+// console.log(1 ===true);
+// console.log(1===true);
+// console.log("0"==false);
+// console.log("0"===false);
+//                               //  Значеняя по Unicod K < k
+// console.log("Kate"<"kate");
+//                               //  коли різні типи данних false
+// console.log(undefined===null);
+// console.log(undefined==null);
 
-
-
-
+// Lesson1-script.js:401 false
+// Lesson1-script.js:402 false
+// Lesson1-script.js:403 true
+// Lesson1-script.js:404 false
+// Lesson1-script.js:406 true
+// Lesson1-script.js:408 false
+// Lesson1-script.js:409 true
  
-// ---------- Приведення типов операндов
+
+// ================================     Арифметичні функції
 
 
 
 
+//-----------  Number. parseInt
+
+// const width ="25px";
+// console.log(Number(width));
+// console.log(Number.parseInt(width));
+
+// // Є метод perseInt, при перетворені на чило доходе до (р) і повертається до числа
+
+// Lesson1-script.js:429 NaN
+// Lesson1-script.js:430 25
+
+
+//  перетвореня до крапки
+// const width ="25.5px";
+
+// console.log(Number.parseInt(width));
+
+// Lesson1-script.js:441 25
+
+// ------------  Number .parceFloat
+
+// const height ="200.42px";
+// console.log(Number.parseFloat(height));
+
+// // коли зустрічає символ (р), яке він не може перетворити на число 
+// // то тоді повертається до числа (а крапку проходе)
+// // Lesson1-script.js:448 200.42
+
+
+
+//--------------  Match (методи можна в браузер - math js)
+
+// Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д.
+// значення змінної value . Використовуй методи MatchFloor(), Matchceil(), та
+// Matchround(). Перевір що буде в консолі при значеннях 27.3 та 27.9
+
+
+// const value=27.5;
+// console.log(Math.floor(value));
+// округлення до цілога числа 27
+
+
+// const value=27.6;
+// console.log(Math.ceil(value));
+// округлення до цілого числа в більшу сторону до 28
+// / Lesson1-script.js:469 28
+
+// const value=27.68;
+// console.log(Math.round(value));
+// // округлення до найближчого цілого числа
+// Lesson1-script.js:475 28
 
 
 
 
+// ===========================================   Функції
+// Оголошення та виклик функції
+// Параметри та аргументи 
+// Повернення значення
 
 
 
+// Визвати функцію
+// function add(tototo, lalala) {
+//  console.log("Hello");
+//  console.log(tototo, lalala);
+
+// }
+// add(5,6);
+
+// Lesson1-script.js:490 Hello
+// Lesson1-script.js:491 5 6
+
+
+// параметри функції function add(параметри)
+// add(); виклик функції
+// дані які ми передаємо під час виклику функції add(аргументи)
+// ----------------------------
+// function add(x, y) {
+//   console.log("Hello");
+//   console.log(x, y);
+ 
+//  }
+//  add(5,6);
+
+//  Lesson1-script.js:505 Hello
+// Lesson1-script.js:506 5 6
+// -----------------------------
+// function add(x, y) {
+//   console.log("Hello");
+//   console.log(x+ y);
+//  }
+//  add(5,6);
+
+//  Lesson1-script.js:515 Hello
+//  Lesson1-script.js:516 11
+
+// --------------------------------
+
+
+const Petya =20*8*20;
+const Kate=20*8*17;
+const Yura =17*8*21;
+
+console.log("Petya", Petya);
+console.log("Kate", Kate);
+console.log("Yura", Yura);
+
+Lesson1-script.js:530 Petya 3200
+Lesson1-script.js:531 Kate 2720
+Lesson1-script.js:532 Yura 2856
 
 
 
+// 1:24:54
+
+// Напиши функцію calcBMI(weight,height) яка розраховує та повертає індекс 
+// маси тіла людини. Для цього необходно розділити вагу на квадрат висоти.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Вага та висота будуть спеціально передані як рядки. Це цілі числа можуть 
+// бути задані у вигляді 24.7 та 24,7 , тобто може бутияк роздільник дробової 
+// частини може бути кома.
 
 
 
