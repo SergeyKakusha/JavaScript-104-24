@@ -539,9 +539,38 @@
 
 // 1:24:54
 
-// якщо у функції нема ключового слова -return- поверне значення -undefined-
+// ===========================  якщо у функції нема ключового слова -return- поверне значення -undefined-
 
-// return припиняє виконання функції
+// ============================         return припиняє виконання функції
+
+                                    // return повертає значення функції
+                                    
+
+
+
+
+// function add(x, y) {
+//    console.log(x+y);
+//    return x+y;
+    
+// }
+
+// const a=add(5,8);
+// const b=add(1,20);
+
+// console.log("a", a);
+// console.log("b", b);
+
+// Lesson1-script.js:553 13
+// Lesson1-script.js:553 21
+// Lesson1-script.js:561 a 13
+// Lesson1-script.js:562 b 21
+
+
+
+
+
+
 // ------------------------------------------------------------------------------
 
 // function add(x,y) {
@@ -641,7 +670,7 @@
 // Lesson1-script.js:634 world
 // Lesson1-script.js:639 hello
 
-// --------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------- Задача
 
 
 // Напиши функцію calcBMI(weight,height) яка розраховує та повертає індекс 
@@ -678,13 +707,19 @@
 
 
 
+// // задача з Д/з 
+
+
+// function getElementWidth(content, padding, border) {
+//     return Number.parseFloat(content)+Number.parseFloat(padding)*2+Number.parseFloat(border)*2
+// }
+
+
+// console.log(getElementWidth("60px", "12px", "8.5px"));
 
 
 
-
-
-
-
+// // Lesson1-script.js:718 101
 
 
 
