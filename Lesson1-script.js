@@ -523,21 +523,126 @@
 // --------------------------------
 
 
-const Petya =20*8*20;
-const Kate=20*8*17;
-const Yura =17*8*21;
+// const Petya =20*8*20;
+// const Kate=20*8*17;
+// const Yura =17*8*21;
 
-console.log("Petya", Petya);
-console.log("Kate", Kate);
-console.log("Yura", Yura);
+// console.log("Petya", Petya);
+// console.log("Kate", Kate);
+// console.log("Yura", Yura);
 
-Lesson1-script.js:530 Petya 3200
-Lesson1-script.js:531 Kate 2720
-Lesson1-script.js:532 Yura 2856
+// Lesson1-script.js:530 Petya 3200
+// Lesson1-script.js:531 Kate 2720
+// Lesson1-script.js:532 Yura 2856
 
 
 
 // 1:24:54
+
+// якщо у функції нема ключового слова -return- поверне значення -undefined-
+
+// return припиняє виконання функції
+// ------------------------------------------------------------------------------
+
+// function add(x,y) {
+//    const dayTotal=x*8*1.2;
+//    return dayTotal *y;
+
+// }
+// const petya=add(20,20);
+// const kate=add(20,17);
+// const yura=add(17,21);
+
+// console.log("petya", petya);
+// console.log("kate", kate);
+// console.log("yura", yura);
+
+// Lesson1-script.js:554 petya 3840
+// Lesson1-script.js:555 kate 3264
+// Lesson1-script.js:556 yura 3427.2
+// ------------------------------------------------
+
+// =======================================================    Області видимості
+                                                            //   локальні та глобальні
+  
+                                                            
+//  const str ="hello";                                                           
+
+// function foo() {
+//     console.log(str); 
+// }
+
+// foo();
+
+// Lesson1-script.js:572 hello
+
+
+// спочатку шукає str в локальній, якщо нема, то він переходе в глобальну область 
+// видимості і знаходе змінної str
+
+
+// ---------------------------------------------------------------------------------
+
+
+                                                            
+//  const str ="hello";                                                           
+
+// function foo() {
+//     const message="world";
+//     console.log(message); 
+// }
+
+// foo();
+// Lesson1-script.js:592 world
+
+// ---------------------------------------------------------------------------------
+// const str ="hello";                                                           
+
+// function foo() {
+//     const message="world";
+//     console.log(message); 
+// }
+
+// foo();
+
+// console.log(message); 
+
+// Lesson1-script.js:608 Uncaught ReferenceError: message is not defined
+//     at Lesson1-script.js:608:13
+
+//     Немає змінної в глобальній області видимості
+
+// ----------------------------------------------------------------------------------
+
+// const str ="hello";                                                           
+
+// function foo() {
+//     const message="world";
+//     console.log(str); 
+// }
+
+// foo();
+
+// Lesson1-script.js:621 hello
+
+// --------------------------------------------------------------------------------
+
+// const str ="hello";                                                           
+
+// function foo() {
+//     const str="world";
+//     console.log(str); 
+// }
+
+// foo();
+
+// console.log(str);
+
+// Lesson1-script.js:634 world
+// Lesson1-script.js:639 hello
+
+// --------------------------------------------------------------------------------
+
 
 // Напиши функцію calcBMI(weight,height) яка розраховує та повертає індекс 
 // маси тіла людини. Для цього необходно розділити вагу на квадрат висоти.
@@ -547,11 +652,27 @@ Lesson1-script.js:532 Yura 2856
 // бути задані у вигляді 24.7 та 24,7 , тобто може бутияк роздільник дробової 
 // частини може бути кома.
 
+// Індекс маси тіла необхідно округлити до однієї цифри після коми.
 
 
+// function calcBMI(weight,heigh) {
+//     let numWeight=weight.replace(",","." );
+//     numWeight=Number.parseFloat(numWeight);
+//     const numHeigh=Number.parseFloat(heigh);
+//     const bmi=numWeight/(numHeigh**2);
+//     return bmi.toFixed(1);
+    
+//     // console.log(nameWeight);
+//     // console.log(nameHeigh);
+    
+// }
+// const bmi=calcBMI("88,3", "1.75");
+// console.log(bmi);
 
 
+// 2:20
 
+// ================================================== toFixed(1); метод toFixed одна цифра після коми
 
 
 
