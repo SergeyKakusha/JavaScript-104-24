@@ -188,19 +188,19 @@
 // Результат наших перевірок ти побачиш у блоці Результати під редактором коду.
 
 
-function makeMessage (name, price) {
-    return You picked ${name}, price per item is ${price} credits;
+// function makeMessage (name, price) {
+//     return You picked ${name}, price per item is ${price} credits;
    
-  }
+//   }
   
-  // Example of calling the function
-  const productName = "Example Product";
-  const productPrice = 20;
+//   // Example of calling the function
+//   const productName = "Example Product";
+//   const productPrice = 20;
   
-  const message = makeMessage(productName, productPrice);
-  console.log(message);
+//   const message = makeMessage(productName, productPrice);
+//   console.log(message);
 
-makeMessage();
+// makeMessage();
 
 
 
