@@ -314,7 +314,7 @@
 // Lesson2-script.js:307 Hello
 // Lesson2-script.js:308 null
 
-// ====================================================== Оператор !
+// ====================================================== Оператор ! (заперечення)
 // повертає протилежне значення Boolen
 
 // console.log(!false);
@@ -382,10 +382,488 @@
 // Lesson2-script.js:380 canChat? false
 
 // -----------------------------------------------------------------------------
-function checkPass(password) {
-  const curPass = "jqueryismyjam";
-  return password === cupPass
-    ? "Access granted"
-    : "Access denied, wrong password!";
+// 2:49
+// Доповни код функції checkAge(age) так, щоб функція повертала рядок "You are an adult",
+// якщо значення параметра age більше або дорівнює 18.
+// Використай у тілі функції інструкцію if для перевірки значення age.
+
+// Оголошена функція checkAge(age)
+// Виклик checkAge(20) повертає рядок "You are an adult"
+// Виклик checkAge(17) повертає undefined
+// Виклик checkAge(10) повертає undefined
+// Виклик checkAge(30) повертає рядок "You are an adult"
+// Виклик функції з випадковими, але валідними аргументами, повертає правильне значення
+
+// function checkPass(password) {
+//   const curPass = "454546";
+//   return password === curPass
+//     ? "Access granted"
+//     : "Access denied, wrong password!";
+// }
+// console.log(checkPass("454546"));
+
+// Lesson2-script.js:403 Access granted
+
+// ============================================================      Методи рядків  ===========================
+
+// - slice
+// - tolowerCase / toUpperCasse;
+// - includes
+// - startsWich/endsWith
+// - indexOf
+// - trim
+
+// =============================================================  Метод  -slice
+
+// -slice (метод clice вирізає з нашого рядочка якийсь шматочок,
+// який потім і повертає цей шматочок).
+// slice(индекс аргумента з якого ми хочемо вирізати, другий індекс агументу до якого будемо вирізати не включно)
+
+//
+
+// const userName = "Alica Franko";
+// const str = userName.slice(0, 4);
+
+// console.log(str);
+
+// Lesson2-script.js:421 Alic
+// -----------------------------------------
+
+// Якщо не задавати другий індекс аргументу
+
+// const userName = "Alica Franko";
+// const str = userName.slice(1);
+
+// console.log(str);
+
+// Lesson2-script.js:430 lica Franko
+
+// ----------------------------------------
+
+// Якщо не передавати жодного індекса аргумента
+
+// const userName = "Alica Franko";
+// const str = userName.slice();
+
+// console.log(str);
+
+// Lesson2-script.js:447 Alica Franko
+
+// -----------------------------------------
+// const userName = "Alica Franko";
+// const str = userName.slice(-6);
+
+// console.log(str);
+
+// Lesson2-script.js:455 Franko
+
+// ============================================================== Метод - tolowerCase / toUpperCasse;
+
+//  (Тут агументи не потрібні порожні дужки        const str = userName.toUpperCase(порожні);)
+
+// - tolowerCase (Цей метод приводить всі індекси до нижнього регістру)
+
+// const userName = "Alica Franko";
+
+// const str = userName.toLocaleLowerCase();
+
+// console.log(userName.toLowerCase(str));
+
+// Lesson2-script.js:465 alica franko
+//
+// --------------------------------------------------------------------
+// -toUpperCasse (Цей метод приводить всі індекси до верхнього регістру)
+
+// const userName = "Alica Franko";
+
+// const str = userName.toUpperCase();
+
+// console.log(userName.toUpperCase(str));
+
+// Lesson2-script.js:478 ALICA FRANKO
+
+// ==============================================================  Метод   -includes
+
+// Метод - includes приймає в себе аргумент підрядок і перевіряє чи є в моєму рядку підрядок який він викликає
+
+// Цей метод повертає нам true якщо він знайде, ящо не знайде повертає false
+
+// УВАГА!!!   Він чутливий до регістру (з маленької або великої літери написано)
+
+// const userName = "Alica Franko";
+
+// console.log(userName.includes("Alica"));
+
+// Lesson2-script.js:490 true
+
+// --------------------------------------------
+
+// const userName = "Alica Franko";
+
+// console.log(userName.includes("fra"));
+
+// Lesson2-script.js:502 false
+
+// ========================================================= Метод -startsWich/endsWith
+
+// -startsWich  Цей метод в себе також приймає підрядок  і перевіряє чи починається мій
+
+// рядок на цю послідовність символів
+
+// / УВАГА!!!   Він чутливий до регістру (з маленької або великої літери написано)
+
+// const userName = "Alica Franko";
+
+// console.log(userName.startsWith("Alic"));
+
+// Lesson2-script.js:514 true
+// ----------------------------------------
+// const userName = "Alica Franko";
+
+// console.log(userName.startsWith("alic"));
+
+// Lesson2-script.js:520 false
+
+// ----------------------------------------
+
+// -endsWith Цей метод в себе також приймає підрядок  і перевіряє чи закінчуэться мій
+
+// рядок на цю послідовність символів.
+
+// / УВАГА!!!   Він чутливий до регістру (з маленької або великої літери написано)
+
+// const userName = "Alica Franko";
+
+// console.log(userName.endsWith("nko"));
+
+// Lesson2-script.js:534 true
+
+// ================================================================= Метод - indexOf
+
+// -indexOf Цей метод приймає в себе якийсь рядок. Це символ який він хоче знайти в моєму рядку,
+// якщо він такий символ знаходе,  то він повертає індекс цього символу, а якщо він не знаходить повертає -1.
+
+// / УВАГА!!!   Він чутливий до регістру (з маленької або великої літери написано)
+
+// const userName = "Alica Franko";
+
+// console.log(userName.indexOf("i"));
+
+// Lesson2-script.js:548 2
+// ------------------------------------------
+
+// const userName = "Alica Franko";
+
+// console.log(userName.indexOf("x"));
+
+// Lesson2-script.js:555 -1
+
+// ------------------------------------------
+
+// Якщо два однакові символи (a) то поверне перший індекс
+
+// const userName = "alica Franko";
+
+// console.log(userName.indexOf("a"));
+
+// Lesson2-script.js:567 0
+
+// ============================================================ Метод - trim
+
+// -trim Цей метод видаляє пробіли з нашого рядка з початка та з кінця нашого рядка
+
+// const userName = "          Alica Franko        ";
+
+// console.log(userName.trim(""));
+
+// Lesson2-script.js:577 Alica Franko
+
+// --------------------------------------------------------------------------------------------------------------
+
+// =========================================================== Форматування посилання  =========================
+
+//  Форматування посилання
+// Напиши скрипт який перевіряє чи закінчуєть значення
+// змінної link символом /. Якщо ні , додай до кінця
+// значення link цей символ.link
+
+// Використовуй конструкцію if...else.
+
+// let link = "https://my-site.ua/about";
+
+// if (!link.endsWith("/")) {
+//   console.log("ok");
+//   link += "/";
+// }
+
+// console.log(link);
+
+// Lesson2-script.js:594 ok
+// Lesson2-script.js:598 https://my-site.ua/about/
+// -------------------------------------------------------------
+
+// Форматування посилання
+// Напиши скрипт який перевіряє чи закінчуєть значення
+// змінної link символом /. Якщо ні , додай до кінця
+// значення link цей символ, але тільки в тому випадку,
+// якщо в link є підрядок "my-site".
+// використовуй конструкцію if...else або тернарний оператор.
+
+// let link = "https://my-site.ua/about";
+
+// if (!link.endsWith("/") && link.includes("my-site")) {
+//   console.log("ok");
+//   link += "/";
+// }
+// console.log(link);
+
+// Lesson2-script.js:615 ok
+// Lesson2-script.js:618 https://my-site.ua/about/
+
+// --------------------------------------------------------------
+// Привіт, я принц Абдул, це не спам, я пропоную вам мільйон
+// Найбільший РОЗПРОДАЖ цього тижня, не пропустіть!
+// # рекламна кампанія fatlivesmatter
+
+// Пошук у рядку методом includes() включає в себе
+
+// const blacklistedWord1 = "spam";
+// const blacklistedWord2 = "sale";
+
+// const string1 = "Hello, I`m Prince Abdul, this not spam, I`m offering you a million ";
+// const string2 = "Biggest SALE this week, don`t miss out!";
+// const string3 = "#fatlivesmatter advertising campaing";
+
+// const norStr2 = string2.toLowerCase();
+
+// console.log(string1.includes(blacklistedWord1));
+// console.log(string1.includes(blacklistedWord2));
+
+// console.log(norStr2.includes(blacklistedWord1));
+// console.log(norStr2.includes(blacklistedWord2));
+
+// console.log(string3.includes(blacklistedWord1));
+// console.log(string3.includes(blacklistedWord2));
+
+// Lesson2-script.js:640 true
+// Lesson2-script.js:641 false
+// Lesson2-script.js:643 false
+// Lesson2-script.js:644 true
+// Lesson2-script.js:646 false
+// Lesson2-script.js:647 false
+
+// ----------------------------------------------------------------------------------------
+
+// =====================================================    Цикли    ======================
+
+// Цикли for
+// Відлік від 0 до N
+// зворотній відлік від N до 0
+// Збільшення / зменшення лічильника на 2+
+// Інкримент і декремент
+// Цикл while i do ..while
+
+// -------------------------------------------------------------------------------------
+
+// Інкремент -це синтаксис який дозволяє збільшувати значення змінної на один
+// Декремент-це синтаксис який дозволяє зменшення значення змінної на один
+
+// Є два формата запису префіксний ++ i, --i,  постфіксний i++, i--
+
+// ===========================  Інкремент
+
+// -------------------------------- префіксний ++ i, --i
+
+// let a = 5;
+// const b = ++a;
+
+// console.log("a", a);
+// console.log("b", b);
+
+// Lesson2-script.js:676 a 6
+// Lesson2-script.js:677 b 6
+
+// --------------------------------- постфіксний i++, i--
+
+// let a = 5;
+// const b = a++;
+
+// console.log("a", a);
+// console.log("b", b);
+
+// Lesson2-script.js:689 a 6
+// Lesson2-script.js:690 b 5
+
+// ==========================  Декремент
+// let a = 5;
+// const b = --a;
+
+// console.log("a", a);
+// console.log("b", b);
+
+// Lesson2-script.js:701 a 4
+// Lesson2-script.js:702 b 4
+
+// -------------------------------
+// let a = 5;
+// const b = a--;
+
+// console.log("a", a);
+// console.log("b", b);
+
+// Lesson2-script.js:711 a 4
+// Lesson2-script.js:712 b 5
+
+// --------------------------------------------------------------------------------------
+
+// console.log("befor");
+
+// for (let i = 0; i < 5; i += 1) {
+//   console.log(i);
+//
+// }
+
+// console.log("after");
+
+//
+// Lesson2-script.js:666 befor
+// Lesson2-script.js:669 0
+// Lesson2-script.js:669 1
+// Lesson2-script.js:669 2
+// Lesson2-script.js:669 3
+// Lesson2-script.js:669 4
+// Lesson2-script.js:673 after
+// ----------------------------------------
+
+// console.log("befor");
+
+// for (let i = 0; i < 5; i += 2) {
+//   console.log(i);
+
+// }
+
+// console.log("after");
+
+// Lesson2-script.js:685 befor
+// Lesson2-script.js:688 0
+// Lesson2-script.js:688 2
+// Lesson2-script.js:688 4
+// Lesson2-script.js:692 after
+
+// ----------------------------------------
+
+// console.log("befor");
+
+// for (let i = 3; i < 10; i += 3) {
+//   console.log(i);
+// }
+
+// console.log("after");
+
+// Lesson2-script.js:702 befor
+// Lesson2-script.js:705 3
+// Lesson2-script.js:705 6
+// Lesson2-script.js:705 9
+// Lesson2-script.js:708 after
+// --------------------------------------
+
+// for (let i = 10; i > 0; i -= 1) {
+//   console.log(i);
+// }
+
+// Lesson2-script.js:718 10
+// Lesson2-script.js:718 9
+// Lesson2-script.js:718 8
+// Lesson2-script.js:718 7
+// Lesson2-script.js:718 6
+// Lesson2-script.js:718 5
+// Lesson2-script.js:718 4
+// Lesson2-script.js:718 3
+// Lesson2-script.js:718 2
+// Lesson2-script.js:718 1
+
+// ------------------------------------
+// for (let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+// Lesson2-script.js:787 0
+// Lesson2-script.js:787 1
+// Lesson2-script.js:787 2
+// Lesson2-script.js:787 3
+// Lesson2-script.js:787 4
+
+// -------------------------------------
+
+// for (let i = 5; i > 0; i--) {
+//   console.log(i);
+// }
+
+// Lesson2-script.js:799 5
+// Lesson2-script.js:799 4
+// Lesson2-script.js:799 3
+// Lesson2-script.js:799 2
+// Lesson2-script.js:799 1
+
+// ------------------------------------
+// let a = 5;
+// console.log(10 * a++);
+// Lesson2-script.js:810 50
+// -------------------------
+// let a = 5;
+// console.log(10 * ++a);
+// Lesson2-script.js:814 60
+// ------------------------------------
+
+// ========================================= Цикл while i do ..while ==========
+// let counter = 0;
+
+// while (counter < 10) {
+//   console.log(counter);
+//   counter++;
+// }
+
+// Lesson2-script.js:822 0
+// Lesson2-script.js:822 1
+// Lesson2-script.js:822 2
+// Lesson2-script.js:822 3
+// Lesson2-script.js:822 4
+// Lesson2-script.js:822 5
+// Lesson2-script.js:822 6
+// Lesson2-script.js:822 7
+// Lesson2-script.js:822 8
+// Lesson2-script.js:822 9
+// --------------------------
+
+//  ========================== На парні
+
+// let total = 0;
+
+// for (let i = 0; i <= 3; i++) {
+//   total += i;
+// }
+// console.log(total);
+
+// Lesson2-script.js:845 6
+// ----------------------------------------
+// let counter = 0;
+// let total = 0;
+
+// while (counter <= 3) {
+//   total += counter;
+//   counter++;
+// }
+// console.log(total);
+
+// Lesson2-script.js:856 6
+
+// --------------------------
+
+console.log("befor");
+let counter = 0;
+
+while (counter < 3) {
+  console.log(counter);
 }
-console.log(checkPassword("angul4r1sl1f3"));
+console.log(total);
+console.log("after");
